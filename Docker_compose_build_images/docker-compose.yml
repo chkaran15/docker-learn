@@ -1,0 +1,27 @@
+# docker-compose.yml
+
+version: '3'
+services:
+  python_service:
+    build:
+      context: .
+      dockerfile: dockerfile.python
+      args:
+        - BASE_IMAGE=python:3.9
+        - APP_VERSION=2.0
+    environment:
+      - DEBUG=true
+    image: karaneworks/python_web:1.0
+
+  node_service:
+    build:
+      context: .
+      dockerfile: dockerfile.node
+      args:
+        - BASE_IMAGE=node:24
+        - APP_NAME=my-nodejs-app
+    environment:
+      - NODE_ENV=development
+    image: karaneworks/node_web:1.0
+
+  

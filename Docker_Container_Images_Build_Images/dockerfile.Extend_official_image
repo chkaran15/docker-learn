@@ -1,0 +1,15 @@
+# Each instruction in this file generates a new layer that gets pushed to your local image cache
+# The linen below stats we weill base our new image on the latest official ubuntu
+FROM nginx:latest
+
+# Identify the maintainer of an image
+
+LABEL version="0.0.1"
+LABEL maintainer="kchaudhary@e-works.co.uk"
+
+# Updateing the work DIR
+WORKDIR /usr/share/nginx/html
+
+
+# Replace Index.html with Custom file
+COPY index.html index.html
