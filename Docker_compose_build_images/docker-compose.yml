@@ -18,10 +18,9 @@ services:
       context: .
       dockerfile: dockerfile.node
       args:
+        - args:
         - BASE_IMAGE=node:24
         - APP_NAME=my-nodejs-app
     environment:
       - NODE_ENV=development
     image: karaneworks/node_web:2.0
-
-  
