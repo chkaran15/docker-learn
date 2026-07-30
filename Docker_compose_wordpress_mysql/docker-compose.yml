@@ -37,7 +37,7 @@ services:
 # Volumes
 volumes:
   mysql_data:
-  wordpress_data
+  wordpress_data:
 
 # network Bridge
 networks:
